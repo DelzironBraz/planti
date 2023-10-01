@@ -1,0 +1,235 @@
+@import '../../stylesheets/index.scss';
+
+.top {
+    .header {
+        @include display($display: flex);
+        justify-content: space-between;
+
+        .title {
+            h1 {
+                font-size: 1.5rem;
+                color: $black;
+                font-weight: $bold;
+            }
+
+            p {
+                font-size: 0.8rem;
+                color: $text;
+                font-weight: $medium;
+            }
+        }
+
+        .search-bar {
+            @include display($display: flex);
+            gap: $spacing-0;
+            padding: $spacing-9 $spacing-13;
+            background-color: $white;
+            border-radius: $spacing-4;
+            gap: $spacing-9;
+            box-shadow: $spacing-0 $spacing-2 $spacing-3 $input;
+
+            input {
+                border: none;
+                outline: none;
+                background: none;
+            }
+
+            .icon {
+                color: $text;
+                cursor: pointer;
+
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+
+        .admin {
+            @include display($display: flex);
+            gap: $spacing-9;
+
+
+            .icon {
+                font-size: 2rem;
+                background-color: $white;
+                border-radius: $spacing-4;
+                padding: $spacing-4;
+                box-shadow: $spacing-0 $spacing-2 $spacing-4 $input;
+                color: $text;
+            }
+
+            .img-user {
+                border: $spacing-3 solid $white;
+                border-radius: $spacing-6;
+                width: $spacing-15;
+                overflow: hidden;
+                box-shadow: $spacing-0 $spacing-2 $spacing-4 $input;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: $spacing-6;
+                }
+            }
+        }
+    }
+
+    .card {
+        @include display($display: flex);
+        margin-top: $spacing-17;
+        gap: $spacing-9;
+
+        &-right {
+            @include display($display: flex);
+            gap: $spacing-0;
+            position: relative;
+            flex-basis: 70%;
+            height: 200px;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            margin: auto;
+            padding: $spacing-13;
+            border-radius: $spacing-9;
+            overflow: hidden;
+
+            .buttons {
+                @include display($display: flex);
+                gap: $spacing-9;
+
+                .btn {
+                    box-shadow: none;
+                    padding: $spacing-8 $spacing-11;
+                    color: $primary;
+                    border: $spacing-1 solid transparent;
+                }
+
+                .transparent {
+                    background: none;
+                    border: $spacing-1 solid $paleGreen;
+                    color: $paleGreen;
+
+                    &:hover {
+                        background-color: $paleGreen;
+                        color: $primary;
+                    }
+                }
+            }
+
+            .video {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                top: $spacing-0;
+                right: $spacing-0;
+                bottom: $spacing-0;
+                left: $spacing-0;
+
+                video {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        &-left {
+            @include display($display: flex);
+            flex-basis: 50%;
+
+            .main {
+                @include display($display: flex);
+                gap: $spacing-0;
+                width: 100%;
+                overflow: hidden;
+                position: relative;
+                padding: $spacing-9;
+                height: 200px;
+                border-radius: $spacing-9;
+                justify-content: space-between;
+
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    background-color: $paleGreen;
+                    left: 0;
+                    bottom: 0;
+                    border-radius: $spacing-9;
+                }
+
+                .text {
+                    z-index: 100;
+                    width: 200px;
+
+                    h1 {
+                        font-size: 1.5rem;
+                        padding-bottom: $spacing-9;
+                        color: $black;
+                    }
+
+                    font-weight: $medium;
+                    color: $black;
+
+                    small {
+                        font-size: 0.8rem;
+                        display: block;
+                        color: $primary;
+                        font-weight: $medium;
+                        padding: $spacing-5 $spacing-0;
+                    }
+
+                    .link {
+                        margin-top: $spacing-13;
+                        cursor: pointer;
+
+                        &:hover {
+                            color: $primary;
+
+                            .icon {
+                                transform: translate(10px);
+                                transition: .3s ease;
+                            }
+                        }
+                    }
+                }
+
+                .img {
+                    transform: translateY(-20px);
+
+                    img {
+                        width: 200px;
+                    }
+                }
+
+                .order {
+                    @include display($display: flex);
+                }
+
+                .link {
+                    @include display($display: flex);
+                }
+            }
+        }
+
+        h1,
+        p,
+        .btn {
+            z-index: 100;
+        }
+
+        h1 {
+            color: $white;
+            font-weight: $extrabold;
+            font-size: 1.5rem;
+        }
+
+        p {
+            padding: $spacing-9;
+            color: $paleGreen;
+            font-weight: $medium;
+        }
+    }
+}
