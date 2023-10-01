@@ -1,1 +1,26 @@
 @import './stylesheets/index';
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: $spacing-9;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.container {
+    position: relative;
+    width: 95vw;
+    height: 95vh;
+    display: flex;
+    justify-content: center;
+    background-color: $background;
+    overflow: hidden;
+    border-radius: $spacing-9;
+    box-shadow: $spacing-2 $spacing-2 $spacing-5 $grey;
+}

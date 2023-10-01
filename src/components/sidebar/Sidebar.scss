@@ -1,0 +1,179 @@
+@import '../../stylesheets/index.scss';
+
+%title {
+    font-size: 1rem;
+    padding: $spacing-0 $spacing-11 $spacing-11;
+}
+
+%list-item {
+    padding: $spacing-3 $spacing-11;
+    width: 100%;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: '';
+        height: 0%;
+        left: $spacing-0;
+        width: $spacing-4;
+        bottom: $spacing-0;
+        border-top-right-radius: $spacing-6;
+        border-bottom-right-radius: $spacing-6;
+        background-color: $primary;
+    }
+
+    &:hover {
+        &::before {
+            height: 100%;
+            transition: .3s ease;
+        }
+    }
+}
+
+%link {
+    color: $text;
+    font-weight: $medium;
+    transition: 0;
+
+    .icon {
+        margin-right: $spacing-5;
+    }
+
+    &:hover {
+        color: $primary;
+        transition: 0;
+    }
+}
+
+.sidebar {
+    @include display($display: grid);
+    background-color: $white;
+    box-shadow: $spacing-1 $spacing-0 $spacing-3 $text;
+    width: 20%;
+    height: 100%;
+    overflow: auto;
+    border-radius: $spacing-9 $spacing-0 $spacing-0 $spacing-9;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .logo {
+        @include display($display: flex);
+        gap: $spacing-0;
+        padding: $spacing-11 $spacing-11 $spacing-0 $spacing-10;
+        cursor: pointer;
+        color: $primary;
+        justify-content: start;
+    }
+
+    .menu {
+        .title {
+            @extend %title;
+        }
+
+        &-list {
+            @include display($display: grid);
+
+            &-item {
+                @extend %list-item;
+
+                &-link {
+                    @include display($display: flex);
+                    @extend %link;
+                    gap: $spacing-2;
+                }
+            }
+        }
+    }
+
+    .settings {
+        .title {
+            @extend %title;
+        }
+
+        &-list {
+            @include display($display: grid);
+
+            &-item {
+                @extend %list-item;
+
+                &-link {
+                    @include display($display: flex);
+                    @extend %link;
+                    gap: $spacing-2;
+                }
+            }
+        }
+    }
+
+    &-card {
+        width: 100%;
+        padding: $spacing-9;
+        text-align: center;
+        position: relative;
+
+        &-content {
+            position: relative;
+            padding: $spacing-9;
+            background-color: $hover;
+            border-radius: $spacing-6;
+            overflow: hidden;
+
+            h3 {
+                font-size: 1rem;
+                margin-top: $spacing-9;
+                padding: $spacing-9 $spacing-0;
+                font-weight: $extrabold;
+            }
+
+            p {
+                font-size: 0.8rem;
+                color: $text;
+                padding-bottom: $spacing-9;
+                font-weight: $medium;
+            }
+
+            .btn {
+                position: relative;
+                color: $text;
+                z-index: 1000;
+            }
+
+            .circle1,
+            .circle2 {
+                position: absolute;
+                background-color: $paleGreen;
+                border-radius: 50%;
+                opacity: .7;
+            }
+
+            .circle1 {
+                height: 100px;
+                width: 100px;
+                top: -50px;
+                left: -50px;
+            }
+
+            .circle2 {
+                height: 150px;
+                width: 150px;
+                top: -80px;
+                left: -70px;
+                z-index: 1;
+            }
+        }
+
+        .icon {
+            position: absolute;
+            background-color: $white;
+            font-size: $spacing-18;
+            padding: 10px;
+            border-radius: 50%;
+            top: -8px;
+            right: 50%;
+            transform: translate(50%);
+            z-index: 100;
+        }
+    }
+}
