@@ -6,3 +6,32 @@
 @import './colors/commom';
 @import './spacing/commom';
 @import './typography/weight.scss';
+
+@mixin display($display: flex) {
+    display: $display;
+    align-items: center;
+    gap: $spacing-11;
+}
+
+.icon {
+    font-size: $spacing-10;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: $spacing-5;
+    box-shadow: $spacing-0 $spacing-2 $spacing-3 $input;
+    padding: $spacing-7 $spacing-9;
+    color: $text;
+
+    &:hover {
+        background-color: $paleGreen;
+        color: $primary;
+    }
+
+    .icon {
+        margin-left: $spacing-5;
+    }
+}
