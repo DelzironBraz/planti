@@ -1,10 +1,14 @@
 @import '../../stylesheets/index.scss';
 
 .main {
-    width: 80%;
+    width: 82%;
     height: 100%;
     padding: $spacing-13;
     overflow: auto;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
 
     &-footer {
         margin-top: $spacing-13;
