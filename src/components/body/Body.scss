@@ -10,9 +10,10 @@
         width: 5px;
     }
 
-    &-footer {
-        margin-top: $spacing-13;
-        gap: $spacing-13;
+    &-content {
         @include display($display: flex);
+        align-items: flex-start;
+        margin-top: $spacing-13;
+        gap: $spacing-9;
     }
 }
