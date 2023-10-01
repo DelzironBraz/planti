@@ -15,5 +15,15 @@
         align-items: flex-start;
         margin-top: $spacing-13;
         gap: $spacing-9;
+        flex-wrap: nowrap;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .main {
+        &-content {
+            align-items: center;
+            flex-wrap: wrap;
+        }
     }
 }

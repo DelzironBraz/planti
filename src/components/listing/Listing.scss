@@ -127,3 +127,39 @@
         }
     }
 }
+
+@media screen and (max-width: 990px) {
+    .listing {
+        flex-basis: 100%;
+
+        .sellers {
+            .card {
+                flex-direction: row;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 918px) {
+    .listing {
+        .single-item {
+            width: 200px !important;
+        }
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .listing {
+
+        .sellers {
+            flex-direction: column;
+
+            &-top,
+            &-feature {
+                .card {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}

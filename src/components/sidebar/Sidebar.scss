@@ -177,3 +177,78 @@
         }
     }
 }
+
+@media screen and (max-width: 820px) {
+    .sidebar {
+        padding-bottom: $spacing-13;
+
+        &-card {
+            display: none !important;
+        }
+    }
+}
+
+@media screen and (max-width: 745px) {
+    .sidebar {
+        .logo {
+            text-align: center;
+            margin: auto;
+            padding: $spacing-11 $spacing-5 $spacing-0;
+        }
+
+        img {
+            max-width: 50px;
+            margin: $spacing-0;
+            border-radius: 10px;
+            padding: $spacing-5;
+        }
+
+        h2 {
+            display: none;
+        }
+
+        .menu,
+        .settings {
+
+            .title {
+                display: none;
+            }
+
+            &-list {
+
+                &-item {
+
+                    &-text {
+                        display: none;
+                    }
+
+                    &-link {
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+@media screen and (max-width: 390px) {
+    .sidebar {
+
+        .menu,
+        .settings {
+
+            &-list {
+
+                &-item {
+                    padding: 0.2rem 0.5rem;
+
+                    &-link {
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -233,3 +233,115 @@
         }
     }
 }
+
+@media screen and (max-width: 990px) {
+    .top {
+
+        .card {
+            flex-direction: column;
+
+            &-right,
+            &-left {
+                width: 100%;
+                flex-basis: 100%;
+            }
+
+            &-left {
+                margin-top: $spacing-13;
+                align-self: flex-start;
+                height: 10px !important;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 918px) {
+    .top {
+
+        .header {
+            .search-bar {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 725px) {
+    .top {
+
+        .card {
+
+            &-left {
+                .main {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .top {
+        .header {
+            .admin {
+                display: none;
+            }
+
+            .title {
+                text-align: center;
+                margin: auto;
+            }
+        }
+
+        .card {
+            &-right {
+                text-align: center;
+
+                .buttons {
+                    margin: auto;
+                    flex-direction: column;
+
+                    .btn {
+                        width: 100%;
+                    }
+                }
+            }
+
+            &-left {
+                .main {
+                    @include display($display: flex);
+                    gap: $spacing-0;
+                    justify-content: center;
+
+                    .text {
+                        margin: auto;
+                    }
+
+                    &::before {
+                        width: 100% !important;
+                    }
+
+                    .img {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .top {
+        .card {
+            &-right {
+                text-align: center;
+                padding: $spacing-13 $spacing-9;
+
+                h1 {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+}
