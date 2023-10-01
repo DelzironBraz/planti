@@ -1,0 +1,14 @@
+@import '../../stylesheets/index.scss';
+
+.main {
+    width: 80%;
+    height: 100%;
+    padding: $spacing-13;
+    overflow: auto;
+
+    &-footer {
+        margin-top: $spacing-13;
+        gap: $spacing-13;
+        @include display($display: flex);
+    }
+}
