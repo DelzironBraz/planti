@@ -151,11 +151,17 @@
 @media screen and (max-width: 490px) {
     .listing {
 
+        .container {
+            justify-content: center;
+        }
+
         .sellers {
             flex-direction: column;
 
             &-top,
             &-feature {
+                width: 100%;
+
                 .card {
                     flex-direction: column;
                 }

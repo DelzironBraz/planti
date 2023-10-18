@@ -1,9 +1,9 @@
 @import '../../stylesheets/index.scss';
 
 .main {
-    width: 82%;
+    width: 95%;
     height: 100%;
-    padding: $spacing-13;
+    padding: $spacing-14;
     overflow: auto;
 
     &::-webkit-scrollbar {
@@ -25,5 +25,11 @@
             align-items: center;
             flex-wrap: wrap;
         }
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .main {
+        padding: $spacing-14 $spacing-0 $spacing-0 $spacing-17;
     }
 }
