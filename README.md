@@ -18,7 +18,9 @@ This aplication was generate by Vite.
 ## Preview
 
 ### Desktop
-![desktop-view](./src/assets/docs/image.png)
+![Desktop close sidebar](./src/assets/docs/desktop-close-sidebar.png)
+![Desktop open sidebar](./src/assets/docs/desktop-open-sidebar.png)
 
 ### Mobile
-![Alt text](./src/assets/docs/image-1.png)
+![Mobile close sidebar](./src/assets/docs/mobile-close-sidebar.png)
+![Mobile open sidebar](./src/assets/docs/mobile-open-sidebar.png)
