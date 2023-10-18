@@ -10,10 +10,14 @@ This aplication was generate by Vite.
 ## How to Run
 
 ### Install the dependencies
-`npm i`
+```js
+npm i
+```
 
 ### Start the server
-`npm run dev`
+```js
+npm run dev
+```
 
 ## Preview
 
