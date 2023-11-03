@@ -8,6 +8,7 @@ import { BsTrophy } from 'react-icons/bs';
 import { AiOutlinePieChart, AiOutlineCreditCard, AiOutlineQuestionCircle } from 'react-icons/ai';
 import { BiTrendingUp } from 'react-icons/bi';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
   const [isCollapse, setIsCollapse] = useState(true);
@@ -30,36 +31,36 @@ const Sidebar = () => {
           <h3 className="title">Quick menu</h3>
           <ul className="menu-list">
             <li className="menu-list-item">
-              <a href="#" className="menu-list-item-link">
+              <Link to="/" className="menu-list-item-link">
                 <IoMdSpeedometer className="icon" />
                 <span className="menu-list-item-text">
                   Dashboard
                 </span>
-              </a>
+              </Link>
             </li>
             <li className="menu-list-item">
-              <a href="#" className="menu-list-item-link">
+              <Link to="/orders" className="menu-list-item-link">
                 <MdDeliveryDining className="icon" />
                 <span className="menu-list-item-text">
                   My Orders
                 </span>
-              </a>
+              </Link>
             </li>
             <li className="menu-list-item">
-              <a href="#" className="menu-list-item-link">
+              <Link to="/explore" className="menu-list-item-link">
                 <MdOutlineExplore className="icon" />
                 <span className="menu-list-item-text">
                   Explore
                 </span>
-              </a>
+              </Link>
             </li>
             <li className="menu-list-item">
-              <a href="#" className="menu-list-item-link">
+              <Link to="/products" className="menu-list-item-link">
                 <BsTrophy className="icon" />
                 <span className="menu-list-item-text">
                   Products
                 </span>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -68,36 +69,36 @@ const Sidebar = () => {
           <h3 className="title">Settings</h3>
           <ul className="settings-list">
             <li className="settings-list-item">
-              <a href="#" className="settings-list-item-link">
+              <Link to="/charts" className="settings-list-item-link">
                 <AiOutlinePieChart className="icon" />
                 <span className="settings-list-item-text">
                   Charts
                 </span>
-              </a>
+              </Link>
             </li>
             <li className="settings-list-item">
-              <a href="#" className="settings-list-item-link">
+              <Link to="/trends" className="settings-list-item-link">
                 <BiTrendingUp className="icon" />
                 <span className="settings-list-item-text">
                   Trends
                 </span>
-              </a>
+              </Link>
             </li>
             <li className="settings-list-item">
-              <a href="#" className="settings-list-item-link">
+              <Link to="/contact" className="settings-list-item-link">
                 <MdOutlinePermContactCalendar className="icon" />
                 <span className="settings-list-item-text">
                   Contact
                 </span>
-              </a>
+              </Link>
             </li>
             <li className="settings-list-item">
-              <a href="#" className="settings-list-item-link">
+              <Link to="/billing" className="settings-list-item-link">
                 <AiOutlineCreditCard className="icon" />
                 <span className="settings-list-item-text">
                   Billing
                 </span>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
